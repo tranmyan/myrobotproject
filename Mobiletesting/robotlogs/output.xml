@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.5 on win32)" generated="20200603 17:32:47.015" rpa="false">
+<suite id="s1" name="Login" source="C:\Users\AnTTM\robotworkspace\robotproject\Mobiletesting\testsuites\login.robot">
+<test id="s1-t1" name="Login To Mobile App Successfully With Valid Credentials">
+<kw name="Given I open the  mobile application" library="mobile">
+<doc>Starts the mobile application on the platform that is given as a parameter in the parameter file</doc>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${PLATFORM_NAME}" == "Android"</arg>
+<arg>Set telemetry for Android</arg>
+</arguments>
+<kw name="Set telemetry for Android" library="mobile">
+<doc>Opens the application on Android</doc>
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<arguments>
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>app=${EXECDIR}/${APK_FILENAME}</arg>
+<arg>automationName=UIAutomator1</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+</arguments>
+<status status="PASS" starttime="20200603 17:32:47.549" endtime="20200603 17:33:01.424"></status>
+</kw>
+<status status="PASS" starttime="20200603 17:32:47.549" endtime="20200603 17:33:01.425"></status>
+</kw>
+<status status="PASS" starttime="20200603 17:32:47.549" endtime="20200603 17:33:01.425"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${PLATFORM_NAME}" == "iOS"</arg>
+<arg>Set telemetry for iOS</arg>
+</arguments>
+<status status="PASS" starttime="20200603 17:33:01.425" endtime="20200603 17:33:01.426"></status>
+</kw>
+<status status="PASS" starttime="20200603 17:32:47.548" endtime="20200603 17:33:01.426"></status>
+</kw>
+<kw name="When I login to mobile app with ${email} and ${password}" library="mobile">
+<doc>I login to mobile app with email@gmail.com and password123</doc>
+<kw name="I enter email in the login page" library="mobile">
+<doc>Enter email in Email field</doc>
+<arguments>
+<arg>${email}</arg>
+</arguments>
+<kw name="Wait until element is visible and input text" library="mobile">
+<doc>Wait until element is visible then input text into the element text field</doc>
+<arguments>
+<arg>${INPUT_EMAIL}</arg>
+<arg>${email_value}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20200603 17:33:06.731" level="INFO">&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;hierarchy rotation="0"&gt;&lt;android.widget.FrameLayout index="0" text="" class="android.widget.FrameLayout" package="com...android" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[0,0][720,1184]" resource-id="" instance="0"&gt;&lt;android.widget.LinearLayout index="0" text="" class="android.widget.LinearLayout" package="com...android" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[0,0][720,1184]" resource-id="" instance="0"&gt;&lt;android.widget.FrameLayout index="0" text="" class="android.widget.FrameLayout" package="com...android" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[0,0][720,1184]" resource-id="android:id/content" instance="1"&gt;&lt;android.view.View index="0" text="" class="android.view.View" package="com...android" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[0,0][720,1184]" resource-id="" instance="0"&gt;&lt;android.view.View index="0" text="" class="android.view.View" package="com...android" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[0,0][720,1184]" resource-id="" instance="1"&gt;&lt;android.view.View NAF="true" index="0" text="" class="android.view.View" package="com...android" content-desc="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[0,0][720,1184]" resource-id="" instance="2"&gt;&lt;android.view.View index="0" text="" class="android.view.View" package="com...android" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[0,0][720,1184]" resource-id="" instance="3"/&gt;&lt;/android.view.View&gt;&lt;/android.view.View&gt;&lt;/android.view.View&gt;&lt;/android.widget.FrameLayout&gt;&lt;/android.widget.LinearLayout&gt;&lt;android.view.View index="1" text="" class="android.view.View" package="com...android" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[0,0][720,48]" resource-id="android:id/statusBarBackground" instance="4"/&gt;&lt;android.view.View index="2" text="" class="android.view.View" package="com...android" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[0,1184][720,1280]" resource-id="android:id/navigationBarBackground" instance="5"/&gt;&lt;/android.widget.FrameLayout&gt;&lt;/hierarchy&gt;</msg>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20200603 17:33:07.870" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200603 17:33:06.732" endtime="20200603 17:33:07.870"></status>
+</kw>
+<msg timestamp="20200603 17:33:07.872" level="FAIL">Element locator 'xpath=//android.widget.EditText[@index='2']' did not match any elements after 5 seconds</msg>
+<status status="FAIL" starttime="20200603 17:33:01.429" endtime="20200603 17:33:07.872"></status>
+</kw>
+<status status="FAIL" starttime="20200603 17:33:01.428" endtime="20200603 17:33:07.872"></status>
+</kw>
+<status status="FAIL" starttime="20200603 17:33:01.427" endtime="20200603 17:33:07.872"></status>
+</kw>
+<status status="FAIL" starttime="20200603 17:33:01.426" endtime="20200603 17:33:07.872"></status>
+</kw>
+<kw name="Quit Application" library="AppiumLibrary" type="teardown">
+<doc>Quit application. Application can be quit while Appium session is kept alive.
+This keyword can be used to close application during test case or between test cases.</doc>
+<status status="PASS" starttime="20200603 17:33:07.873" endtime="20200603 17:33:08.240"></status>
+</kw>
+<doc>I login to mobile app with valid credentials successfully</doc>
+<tags>
+<tag>LOGIN</tag>
+<tag>MOBILE</tag>
+<tag>SIT</tag>
+</tags>
+<status status="FAIL" starttime="20200603 17:32:47.547" endtime="20200603 17:33:08.240" critical="yes">Element locator 'xpath=//android.widget.EditText[@index='2']' did not match any elements after 5 seconds</status>
+</test>
+<status status="FAIL" starttime="20200603 17:32:47.034" endtime="20200603 17:33:08.241"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1">LOGIN</stat>
+<stat pass="0" fail="1">MOBILE</stat>
+<stat pass="0" fail="1">SIT</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20200603 17:32:47.083" level="WARN">Imported resource file 'C:\Users\AnTTM\robotworkspace\robotproject\Mobiletesting\Configures\androidConfig.robot' is empty.</msg>
+<msg timestamp="20200603 17:32:47.086" level="WARN">Imported resource file 'C:\Users\AnTTM\robotworkspace\robotproject\Mobiletesting\Configures\iOSConfig.robot' is empty.</msg>
+</errors>
+</robot>
